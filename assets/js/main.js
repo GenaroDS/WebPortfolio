@@ -264,7 +264,7 @@ $(document).ready(function () {
 // For avatar
 $(document).ready(function() {
     $(".avatar-popup").fancybox({
-		clickContent    : false,	
+        clickContent    : false,    
         openEffect: 'elastic',
         closeEffect: 'elastic',
         clickSlide: "close", // Closes the modal when clicking on the slide (image)
@@ -272,7 +272,7 @@ $(document).ready(function() {
         buttons: ["close"], // Only shows the close button
         touch: false, // Disables touch gestures
         wheel: false, // Disables zoom on wheel
-		loop: false,
+        loop: false,
         slideShow: false, // Disables slideshow functionality
         fullScreen: false, // Disables fullscreen functionality
         thumbs: false, // Disables thumbnails at the bottom
@@ -282,17 +282,18 @@ $(document).ready(function() {
             $(".fancybox-slide").css({
                 "align-items": "center",
                 "justify-content": "center",
-
-            });		
+            });        
         },
-		afterShow: function() {
-            // Add click event to the image to close the fancybox
-            $(".fancybox-image").on("mousedown", function() {
+        afterShow: function() {
+            // Add events to the Fancybox content container to close the fancybox
+            $(".fancybox-content").on("mousedown touchstart", function() {
                 $.fancybox.close();
             });
         }
     });
 });
+
+
 
 
 
