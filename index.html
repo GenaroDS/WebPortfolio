@@ -7,19 +7,19 @@
 <html>
 
 <head>
-	<title>Genaro's Website</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Genaro's Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-	<link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
+    <!-- Only one jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 </head>
 
 <body class="is-preload">
@@ -38,7 +38,9 @@
 					</div>
 				</div>
 			</nav>
-			<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+			<a href="images/avatar.jpg" class="avatar-popup" data-fancybox data-touch="true">
+				<img src="images/avatar.jpg" alt="Genaro's Avatar" class="image avatar">		</a>						
+			
 			<h1><strong>I'm Genaro Di Stilio. </strong><br /> Software developer and <br /> computer science
 				student.<br /></h1>
 			<br />
@@ -198,9 +200,7 @@
 
 		<!-- Certificates tab-->
 		<section id="certificates">
-			<h2>Certificates <i class="fas fa-exclamation-circle tooltip-icon"
-					data-tooltip="Python certificates are awaiting issuance. "></i>
-			</h2>
+			<h2>Certificates </h2>
 			<div class="certificate-wrapper">
 				<button class="scroll-btn scroll-left" onclick="scrollGallery('left')">&lt;</button>
 				<div class="certificate-container">
@@ -316,7 +316,6 @@
 
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.poptrox.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>

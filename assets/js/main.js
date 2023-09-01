@@ -263,15 +263,39 @@ $(document).ready(function () {
 
 // For avatar
 $(document).ready(function() {
-	$('.round-avatar-popup').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		mainClass: 'mfp-img-mobile',
-		image: {
-		verticalFit: true
-		}
-	});
-	});
+    $(".avatar-popup").fancybox({
+		clickContent    : false,	
+        openEffect: 'elastic',
+        closeEffect: 'elastic',
+        clickSlide: "close", // Closes the modal when clicking on the slide (image)
+        clickOutside: "close", // Closes the modal when clicking outside the slide
+        buttons: ["close"], // Only shows the close button
+        touch: false, // Disables touch gestures
+        wheel: false, // Disables zoom on wheel
+		loop: false,
+        slideShow: false, // Disables slideshow functionality
+        fullScreen: false, // Disables fullscreen functionality
+        thumbs: false, // Disables thumbnails at the bottom
+        zoom: false, // Disables zoom functionality
+        beforeShow: function() {
+            // This centers the image vertically and horizontally
+            $(".fancybox-slide").css({
+                "align-items": "center",
+                "justify-content": "center",
+
+            });		
+        },
+		afterShow: function() {
+            // Add click event to the image to close the fancybox
+            $(".fancybox-image").on("mousedown", function() {
+                $.fancybox.close();
+            });
+        }
+    });
+});
+
+
+
 	  
 
 let tabContents = {

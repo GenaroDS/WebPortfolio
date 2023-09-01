@@ -3233,10 +3233,26 @@ input[type="button"]:disabled,
 }
 
 
-/* Avatar poptrox */
-.mfp-content .round-avatar-popup img {
-    border-radius: 50%;
+/* Avatar Popup Styles */
+
+.avatar-popup img {
+    border-radius: 50%; /* Rounded */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Optional shadow for a bit of depth */
 }
+
+.fancybox-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.fancybox-slide img {
+    border-radius: 50%;
+
+}
+
+
 
 
 
