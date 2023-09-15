@@ -293,10 +293,6 @@ $(document).ready(function() {
     });
 });
 
-
-
-
-
 	  
 
 let tabContents = {
@@ -341,4 +337,78 @@ function changeTab(tabName) {
         windowMargin: (breakpoints.active('<=small') ? 0 : 50)
     });
 }
+
+$(document).ready(function() {
+    // When the segment is hovered
+    $('.segment').hover(
+        function() {
+            // Add a class to the start circle when the segment is hovered
+            $('.start-circle').addClass('highlighted');
+        },
+        function() {
+            // Remove the class from the start circle when the hover ends
+            $('.start-circle').removeClass('highlighted');
+        }
+    );
+});
+
+
+/* WORK */
+
+$(document).ready(function() {
+    var hideTimeout;
+
+    $(".segment").on('mouseover', function(event) {
+        clearTimeout(hideTimeout); // Clear any existing timeout
+
+        // Highlight the start circle
+        $(".start-circle").addClass("highlighted");
+        
+        // Get the job description from the data-info attribute
+        var jobDescription = $(this).attr('data-info');
+        
+        // Set the job description in the info card
+        $('#infoCard p').text(jobDescription);
+        
+        // Display the info card
+        $('#infoCard').show();
+    });
+
+    $(".segment").on('mousemove', function(event) {
+        // Position the info card with the mouse
+        var infoCard = $('#infoCard');
+        var cardWidth = infoCard.outerWidth();
+        
+        infoCard.css({
+            'left': (event.clientX - cardWidth / 2) + 'px', // Center the tooltip horizontally
+            'top': (event.clientY - 100) + 'px' // Position the tooltip above the mouse
+        });
+    });
+
+    $(".segment").on('mouseout', function(event) {
+        // Check if the new target is the infoCard itself
+        if (!$(event.relatedTarget).closest('#infoCard').length) {
+            hideTimeout = setTimeout(function() {
+                // Remove the highlight from the start circle
+                $(".start-circle").removeClass("highlighted");
+                
+                // Hide the info card
+                $('#infoCard').hide();
+            }, 100); // 100ms delay
+        }
+    });
+
+    // Prevent the infoCard from disappearing when hovering over it
+    $('#infoCard').on('mouseenter', function() {
+        clearTimeout(hideTimeout);
+    });
+
+    $('#infoCard').on('mouseleave', function() {
+        $(".start-circle").removeClass("highlighted");
+        $('#infoCard').hide();
+    });
+});
+
+
+
 

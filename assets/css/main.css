@@ -96,6 +96,7 @@ video {
 	vertical-align: baseline;
 }
 
+
 article,
 aside,
 details,
@@ -181,6 +182,7 @@ html {
 body {
 	background: #fdfaf8;
 	/* #fff */
+	
 }
 
 body.is-preload *,
@@ -3253,9 +3255,6 @@ input[type="button"]:disabled,
 }
 
 
-
-
-
 /* Touch */
 
 body.is-touch .image.thumb:before {
@@ -3994,4 +3993,117 @@ body.is-touch .poptrox-popup .closer {
 	transition: transform 0.3s;
 }
 
+
+
+/* Work experience timeline */
+/* Work experience timeline */
+:root {
+    --lineteal:rgb(112, 142, 148);
+}
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.start-circle, .end-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--lineteal);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.start-circle {
+    left: 0;
+    transition: box-shadow 0.3s ease; /* This line adds the transition effect */
+}
+
+.end-circle {
+    right: 0;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px; /* Adjust based on circle size */
+    right: 10px;
+    height: 6px;
+    background-color: var(--lineteal);
+    z-index: 0; /* Ensure the main line is below the segment */
+}
+
+.segment {
+    left: 1%; /* Adjust based on where the segment starts */
+    width: 45%; /* Adjust based on segment length */
+    height: 6px;
+    padding: 20px 0; /* This increases the hoverable area */
+    background-color: transparent; /* Ensure the segment itself is transparent */
+    cursor: pointer;
+    z-index: 2; /* Ensure the segment is above the line */
+    position: relative;
+    overflow: hidden; /* This ensures the pseudo-element doesn't extend beyond the segment */
+}
+
+.segment::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 6px; /* This is the visible thickness of the line */
+    background-color: var(--lineteal);
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.segment:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 10px 7px rgba(0, 128, 128, 0.6);
+}
+
+.start-circle.highlighted {
+    box-shadow: 0 0 10px 2px var(--lineteal);
+    z-index: 1;
+}
+
+.timeline-labels {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.start-label {
+    position: absolute;
+    left: 0;
+}
+
+.present-label {
+    position: absolute;
+    left: 40%;
+}
+
+.info-card {
+    display: none;
+    position: fixed; /* Changed from absolute to fixed */
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid var(--lineteal);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
 
