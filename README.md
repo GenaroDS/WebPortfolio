@@ -1,14 +1,14 @@
 # Web Portfolio
 Welcome to GDS Web Portfolio - a sleek, lightweight, and fully personalized static web portfolio that showcases work, skills, projects, certifications, and more. It's a modified version of the Strata template by HTML5 UP, tailored to provide an engaging and responsive display for visitors.
 
-<details>
+<!--<details>
 <summary><h2>Screenshots</h2></summary>
 
 **About Me tab:**
 ![Screenshot 1](screenshots/01.png)
   
 **Education & Certifications tab:**
-![Screenshot 2](screenshots/02.png)
+![Screenshot 2](screenshots/02.png)-->
 
 </details>
 
