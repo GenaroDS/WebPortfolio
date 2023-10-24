@@ -3608,12 +3608,6 @@ body.is-touch .poptrox-popup .closer {
 .item-header {
 	margin-bottom: 10px;
 }
-.education-wrapper {
-    /* Your desired styles for the new container */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 
 
@@ -3895,13 +3889,13 @@ body.is-touch .poptrox-popup .closer {
 
 
 
-/* Python certificates not emited tooltip */
+/* Custom Tooltip */
 
 
 .tooltip-icon {
     position: relative;
     display: inline-block;
-    font-size: 0.8em; 
+    font-size:0.9em; 
     color: #18181879;
 }
 
@@ -3913,22 +3907,25 @@ body.is-touch .poptrox-popup .closer {
     transform: translateY(-50%);
     white-space: nowrap;
     z-index: 10;
-    padding: 10px;
-    background-color: #18181879;
-    color: #fff;
+    padding: 5px;
+    background-color: #181818c4;
+    color: #fdfaf8;
     border-radius: 5px;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    font-size: 0.8em; 
-    font-weight: 100;
+    font-size: 1em; 
+    font-weight: 120;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
-    margin-left: 10px; /* some space between the icon and the tooltip */
+    margin-left: -5px; /* some space between the icon and the tooltip */
+	margin-top: -40px;
+	
 }
 
 .tooltip-icon:hover::after {
     opacity: 1;
 }
+
 
 
 
