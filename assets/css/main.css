@@ -3550,9 +3550,10 @@ body.is-touch .poptrox-popup .closer {
 .education-container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: 15px;
 	justify-content: center;
-	padding-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .education-item {
@@ -3579,7 +3580,7 @@ body.is-touch .poptrox-popup .closer {
 }
 
 .education-item h4 {
-	margin: 0.5rem 0;
+	margin: 0rem 0;
 	padding: 0;
 	font-size: 1.25rem;
 	font-weight: normal;
@@ -3587,7 +3588,7 @@ body.is-touch .poptrox-popup .closer {
 }
 
 .education-item p {
-	margin: 0.5rem 0;
+	margin: 0rem 0;
 	padding: 0;
 	font-size: 1rem;
 	color: #555;
@@ -3607,6 +3608,12 @@ body.is-touch .poptrox-popup .closer {
 .item-header {
 	margin-bottom: 10px;
 }
+.education-wrapper {
+    /* Your desired styles for the new container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 
@@ -3616,6 +3623,10 @@ body.is-touch .poptrox-popup .closer {
 		width: calc(50% - 30px);
 	}
 }
+
+
+
+
 
 /* ABOUT ME SECTION ITEMS */
 #about-me {
@@ -3643,7 +3654,7 @@ body.is-touch .poptrox-popup .closer {
 }
 
 .dropdown-btn {
-	background-color: rgba(0, 0, 0, 0.205);
+	background-color: rgba(0, 0, 0, 0.305);
 	color: white;
 	border: none;
 	border-radius: 3px;
@@ -3994,4 +4005,103 @@ body.is-touch .poptrox-popup .closer {
 	transition: transform 0.3s;
 }
 
+/* WORK SECTION ITEMS */
 
+#work {
+    padding: 2rem 0;
+}
+
+.work-experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.work-experience-item {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent; /* Added thicker border to denote hierarchy */
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s, border-color 0.3s; /* Added border-color to the transition */
+    cursor: pointer;
+    padding-bottom: 0px;
+}
+
+.work-experience-item:hover {
+    transform: translateY(-10px);
+    border-color: green; /* Green effect around it when hovering */
+}
+
+.company-logo {
+    width: 40px; /* Or whatever size suits the design */
+    margin-right: 10px;
+}
+
+.work-experience-item h3, .work-item h4 {
+    display: inline-block;
+}
+
+.work-experience-item h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.work-experience-item h4 {
+
+    padding: 0;
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: #333;
+}
+
+.work-experience-item ul {
+    padding-left: 1rem;
+}
+
+.work-experience-item li {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.work-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* WORK EXPERIENCE CONTAINER STYLES */
+
+
+.work-entry {
+    background-color: #fdfaf8; /* White background for each work entry */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1; /* A subtle border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s, border-color 0.3s; 
+    cursor: pointer;
+    padding-bottom: 0px;
+}
+
+.work-entry:hover {
+    transform: translateY(-5px); /* Slightly reducing the hover effect for a more subtle lift */
+    border-color: #b0b0b0; /* A slightly darker border color when hovering */
+}
+
+
+@media (min-width: 768px) {
+    .work-experience-item {
+        width: calc(50% - 30px);
+    }
+}
